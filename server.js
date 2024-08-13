@@ -16,7 +16,6 @@ const port = 8080
 
 main().catch(err =>{
   console.log(err)
-  res.send("Server under maintainence")
 } );
 
  async function main() {
