@@ -38,7 +38,6 @@ app.post('/verified', async (req, res) => {
   console.log(req.body.Token)
   if (req.body.Token !== undefined){
     let update = await token.updateOne({ ID: req.body.Token }, { $set: { status: true } })
-    let Delete = await token.deleteOne({ ID: req.body.Token })
     console.log(update)
     console.log(Delete)
     res.json(update)
